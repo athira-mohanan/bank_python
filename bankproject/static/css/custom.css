@@ -1,0 +1,100 @@
+body{
+font-family: 'Roboto', sans-serif;
+}
+.banner{
+    background-color:blue;
+    height:20px;
+    width:100%;
+}
+/**NavBar**/
+.nav-item{
+    letter-spacing:.2em;
+    font-size:14px;
+    text-transform:uppercase;
+    font-color:white;
+}
+.nav-link,.nav-link active{
+    color:white;
+}
+.dropdown-item{
+    letter-spacing:.2em;
+    font-size:14px;
+    text-transform:uppercase;
+}
+.my_footer{
+    background-color:#f8f9fa;
+    margin-top:10px;
+    height:40px;
+}
+.my_footer p{
+
+    padding-top:20px;
+    font-size:14px;
+}
+ .container{
+     width:100%;
+}
+.topleft {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 18px;
+}
+img {
+     width: 100%;
+     height: auto;
+}
+.btn{
+     padding: 16px 30px;
+     border: none;
+     border-radius: 5px;
+     text-align:center;
+}
+.homestyle{
+    border:block;
+    border-color:1px solid black;
+    margin-left:30%;
+    margin-right:25%;
+    margin-top:100px;
+}
+
+.btn{
+  margin: 30px 0;
+  height: 60px;
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  border-radius:5px;
+}
+ .btn .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  padding:5px;
+  z-index: -1;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  transition: all 0.4s;
+}
+ .btn:hover .inner{
+  left: 0;
+}
+ .btn button{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.d1{
+    margin-left:70px;
+    font-size:20px;
+    font-weight:bold;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+      <link rel="stylesheet" href="{% static 'css/login.css' %}">
+      <div class="center">
+         <div class="container">
+            <div class="text">Login Form</div>
+            <form action="" method="post">
+               {% csrf_token %}
+               <div class="d1" style="margin-top:20px;">
+                  {% for msg in messages %}
+                  <p style="color:red">{{msg}}</p>
+                  {% endfor %}
+                </div>
+               <div class="data">
+                  <label>Username</label><input type="text" name="username" required>
+               </div>
+               <div class="data">
+                  <label>Password</label><input type="password" name="password" required>
+               </div>
+               <div class="btn">
+                  <div class="inner"></div>
+                  <button type="submit">login</button>
+               </div>
+               <div class="signup-link">
+                  Not a member? <a href="{% url 'bankapp:register' %}">Signup now</a>
+               </div>
+            </form>
+         </div>
+      </div>
+{% endblock %}

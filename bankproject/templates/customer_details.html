@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <table class="table table-striped table-hover">
+             <thead>
+                <tr>
+                    <th scope="col">Sl No.</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">District & City</th>
+                    <th scope="col">Account Type</th>
+                    <th scope="col">Material Type</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in all_cust %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.cust_name}}</td>
+                    <td>{{i.dob}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.gender}}</td>
+                    <td>{{i.phone}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.address}}</td>
+                    <td>
+                        {{i.branch.branch_name}},<br>
+                        {{i.sub_branch.sub_name}}
+                    </td>
+                    <td>{{i.account_type}}</td>
+                    <td>{{i.material}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="mx_auto" style="margin-bottom:20px;">
+            {% if all_cust.paginator.num_pages > 1 %}
+            <hr>
+            <div class="text-center">
+                {% for pg in all_cust.paginator.page_range %}
+                    <a href="?page={{pg}}" class="btn btn-light btn-sm {% if products.number == pg %} active {% endif %}">{{pg}}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+</div>
+
+{% endblock %}
